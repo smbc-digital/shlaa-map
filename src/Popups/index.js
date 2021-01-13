@@ -1,65 +1,76 @@
-const developablesitesPopup = (feature, layer) => {
+const deliverablePopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Developable sites SHLAA 2020</p>
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Deliverable Sites - SHLAA 2018</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Site Capacity: ${feature.properties.capacity}</p>
-  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
+  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_name}</p>
+  <p class="info">Estimated Dwelling Capacity: ${feature.properties.site_capacity}</p>
+  <p class="info">Development Period: ${feature.properties.development_trajectory}</p>
   
   </div>`
  
   layer.bindPopup(content)
  }
 
- const tclaPopup = (feature, layer) => {
+ const developablePopup = (feature, layer) => {
+  
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Developable Sites - SHLAA 2018</p>
+  <p></p>
+  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_name}</p>
+  <p class="info">Estimated Dwelling Capacity: ${feature.properties.site_capacity}</p>
+  <p class="info">Delivery Period: ${feature.properties.development_trajectory}</p>
+  
+  </div>`
+ 
+  layer.bindPopup(content)
+ }
+
+ const towncentrelivingareaPopup = (feature, layer) => {
   
   const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Town Centre Living Area</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Site Capacity: ${feature.properties.capacity}</p>
-  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
+  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_name}</p>
+  <p class="info">Estimated Dwelling Capacity: ${feature.properties.site_capacity}</p>
+  <p class="info">Delivery Period: ${feature.properties.development_trajectory}</p>
   
   </div>`
  
   layer.bindPopup(content)
  }
 
- const conservationPopup = (feature, layer) => {
+ const notdevelopablePopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Conservation Area</p>
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Not Developable SHLAA Sites - SHLAA 2018</p>
   <p></p>
-  <p class="info">Name: ${feature.properties.cons_area}</p>
+  <p class="info">Site References: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_address}</p>
   
   </div>`
  
   layer.bindPopup(content)
  }
 
- const permissionedPopup = (feature, layer) => {
+ const residentialPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Sites with planning permission for housing</p>
+  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Already Residential - SHLAA 2018</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Site Net Capacity: ${feature.properties.net_capacity}</p>
-  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
+  <p class="info">Site References: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_address}</p>
   
   </div>`
  
   layer.bindPopup(content)
  }
 
- const notassessedPopup = (feature, layer) => {
+ const rlaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Sites that did not pass first sift of SHLAA 2020</p>
+  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Residential Land Availability Sites</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">${feature.properties.website_map_text}</p>
-
+  <p class="info">Site References: ${feature.properties.site_reference}</p>
+  <p class="info">Site Name: ${feature.properties.site_name}</p>
+  <p class="info">Estimated Dwelling Capacity: ${feature.properties.dwelling_capacity}</p>
   
   </div>`
  
@@ -67,9 +78,10 @@ const developablesitesPopup = (feature, layer) => {
  }
 
 export {
-  developablesitesPopup,
-  conservationPopup,
-  permissionedPopup,
-  notassessedPopup,
-  tclaPopup
+  deliverablePopup,
+  developablePopup,
+  towncentrelivingareaPopup,
+  notdevelopablePopup,
+  residentialPopup,
+  rlaPopup
 }
