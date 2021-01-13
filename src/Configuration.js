@@ -31,7 +31,7 @@ const Configuration = {
             key: 'Developable SHLAA Sites',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa18_developable&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
-                onEachFeature: developablePopup
+                onEachFeature: developablePopup,
                 maxZoom: 2,
                 style: developableStyle
             },
