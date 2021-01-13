@@ -1,44 +1,44 @@
 const deliverableStyle = {
-    color: '#003c30',
+    color: '#e31a1c',
     weight: 2,
     opacity: 1,
     fillColor: '#01665e',
     fillOpacity: 0
 }
 const developableStyle = {
-    color: '#fdb462',
+    color: '#cab2d6',
     weight: 2,
     opacity: 1,
     fillColor: '#fdb462',
     fillOpacity: 0
 }
-const towncentrelivingareaStyle = { //This needs changing based on how the input of deliverable and non developable sites works out.
-    color: '#bc80bd',
+const towncentrelivingareaStyle = {
+    color: '#6a3d9a',
     weight: 2,
     opacity: 1,
     fillColor: '#fccde5',
-    fillOpacity: 0.5
+    fillOpacity: 0
 }
 const notdevelopableStyle = {
-    color: '#b3de69',
+    color: '#1f78b4',
     weight: 2,
-    opacity: 0.25,
+    opacity: 1,
     fillColor: '#b3de69',
-    fillOpacity: 0.25
+    fillOpacity: 0
 }
 const residentialStyle = {
-    color: '#e31a1c',
+    color: '#fb9a99',
     weight: 2,
     opacity: 1,
     fillColor: '#fb9a99',
-    fillOpacity: 0.5
+    fillOpacity: 0
 }
 const rlaStyle = {
-    color: '#081d58',
+    color: '#ff7f00',
     weight: 2,
     opacity: 1,
     fillColor: '#253494',
-    fillOpacity: 0.5
+    fillOpacity: 0
 }
 export {
     deliverableStyle,
