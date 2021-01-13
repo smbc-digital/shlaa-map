@@ -5,13 +5,6 @@ const deliverableStyle = {
     fillColor: '#01665e',
     fillOpacity: 0
 }
-const tclaStyle = {
-    color: '#49006a',
-    weight: 2,
-    opacity: 1,
-    fillColor: '#7a0177',
-    fillOpacity: 0.25
-}
 const developableStyle = {
     color: '#fdb462',
     weight: 2,
