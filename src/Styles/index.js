@@ -6,7 +6,7 @@ const deliverableStyle = {
     fillOpacity: 0
 }
 const developableStyle = {
-    color: '#cab2d6',
+    color: '#1a9850',
     weight: 2,
     opacity: 1,
     fillColor: '#fdb462',
@@ -27,7 +27,7 @@ const notdevelopableStyle = {
     fillOpacity: 0
 }
 const residentialStyle = {
-    color: '#fb9a99',
+    color: '#c51b7d',
     weight: 2,
     opacity: 1,
     fillColor: '#fb9a99',
