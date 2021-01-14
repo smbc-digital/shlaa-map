@@ -28,7 +28,7 @@ const deliverablePopup = (feature, layer) => {
 
  const towncentrelivingareaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Town Centre Living Area</p>
+  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Town Centre Living Area 2018</p>
   <p></p>
   <p class="info">Site Reference: ${feature.properties.site_reference}</p>
   <p class="info">Site Name: ${feature.properties.site_name}</p>
