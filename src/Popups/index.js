@@ -87,7 +87,7 @@ const developablesitesPopup = (feature, layer) => {
   
   const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">All Sites Considered (SHLAA 2020)</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.site_reference}</p>
+  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
 
   
   </div>`
