@@ -63,6 +63,14 @@ const notassessedStyle = {
     fillColor: '#253494',
     fillOpacity: 0.5
 }
+const nondevelopablesitesStyle = {
+    color: '#7f2704',
+    weight: 2,
+    opacity: 1,
+    fillColor: '#a63603',
+    fillOpacity: 0.5
+}
+
 export {
 allsubmittedStyle,
 tcwmdcStyle,
@@ -71,5 +79,6 @@ floodzonesStyle,
 greenbeltStyle,
 permissionedStyle,
 notassessedStyle,
-tclaStyle
+tclaStyle,
+nondevelopablesitesStyle
 }

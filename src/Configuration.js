@@ -1,5 +1,5 @@
-import { developablesitesPopup, permissionedPopup, notassessedPopup, tclaPopup} from './Popups' //devsitesPopup, notdevsitesPopup}
-import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, allsubmittedStyle, permissionedStyle, notassessedStyle, tclaStyle} from './Styles'
+import { developablesitesPopup, permissionedPopup, notassessedPopup, tclaPopup, nondevelopablesitesPopup, allsitesPopup} from './Popups' //devsitesPopup, notdevsitesPopup}
+import { developablesitesStyle, tcwmdcStyle, greenbeltStyle, floodzonesStyle, allsubmittedStyle, permissionedStyle, notassessedStyle, tclaStyle, nondevelopablesitesStyle} from './Styles'
 
 const Configuration = {
     Map: {
@@ -76,6 +76,7 @@ const Configuration = {
             key: 'All sites considered (SHLAA 2020)',
             url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_allsites&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
             layerOptions: {
+                onEachFeature: allsitesPopup,
                 maxZoom: 2,
                 style: allsubmittedStyle
             },
@@ -94,6 +95,19 @@ const Configuration = {
             },
             displayOverlay: true,
             visibleByDefault: true
+        },
+
+        {
+            key: 'Sites assessed as not developable (SHLAA 2020)',
+            url: 'https://spatial.stockport.gov.uk/geoserver/wfs?service=WFS&version=1.1.0&request=GetFeature&typeName=planning:shlaa2020_non_developable&outputFormat=application/json&bbox={0},EPSG:4326&srsName=EPSG:4326',
+            layerOptions: {
+                onEachFeature: nondevelopablesitesPopup,
+                maxZoom: 2,
+                style: nondevelopablesitesStyle
+
+            },
+            displayOverlay: true,
+            visibleByDefault: false
         },
 
         {
