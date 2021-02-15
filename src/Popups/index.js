@@ -76,7 +76,7 @@ const developablesitesPopup = (feature, layer) => {
   <p class="info">Site Address: ${feature.properties.site_address}</p>
   <p class="info">Site Description: ${feature.properties.site_description}</p>
   <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">"Notes: See site assessment summary in the Annex to the main SHLAA report."</p>
+  <p class="info">Notes: See site assessment summary in the Annex to the main SHLAA report.</p>
   
   </div>`
  
