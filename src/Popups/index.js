@@ -58,7 +58,7 @@ const developablesitesPopup = (feature, layer) => {
   
   const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Sites that did not pass initial sift (SHLAA 2020)</p>
   <p></p>
-  <p class="info">Site Address: ${feature.properties.temp_id} (Working reference)</p>
+  <p class="info">Site Reference: ${feature.properties.temp_id} (Working reference)</p>
   <p class="info">Site Address: ${feature.properties.site_address}</p>
   <p class="info">${feature.properties.website_map_text}</p>
 
