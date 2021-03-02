@@ -1,14 +1,18 @@
 const developablesitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Sites - Developable (SHLAA 2020)</p>
-  <p></p>
-  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Est. Site Capacity: ${feature.properties.capacity}</p>
-  <p class="info">Est. Delivery Years: ${feature.properties.delivery_years}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fas fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites - Developable (SHLAA 2020)</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Site Reference: ${feature.properties.site_reference}</p>
+      <p>Site Address: ${feature.properties.site_address}</p>
+      <p>Site Description: ${feature.properties.site_description_2020}</p>
+      <p>Site Area (Ha): ${feature.properties.site_area}</p>
+      <p>Est. Site Capacity: ${feature.properties.capacity}</p>
+      <p>Est. Delivery Years: ${feature.properties.delivery_years}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
