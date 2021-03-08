@@ -20,14 +20,18 @@ const developablesitesPopup = (feature, layer) => {
 
  const tclaPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Town Centre Living Area</p>
-  <p></p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Description: ${feature.properties.site_description_2020}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Site Capacity: ${feature.properties.capacity}</p>
-  <p class="info">Delivery Years: ${feature.properties.delivery_years}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Town Centre Living Area</span>
+    </div>
+    <div class="smbc-map__item__body">
+    <p>Site Address: ${feature.properties.site_address}</p>
+    <p>Site Description: ${feature.properties.site_description_2020}</p>
+    <p>Site Area (Ha): ${feature.properties.site_area}</p>
+    <p>Site Capacity: ${feature.properties.capacity}</p>
+    <p>Delivery Years: ${feature.properties.delivery_years}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -35,10 +39,14 @@ const developablesitesPopup = (feature, layer) => {
 
  const conservationPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Conservation Area</p>
-  <p></p>
-  <p class="info">Name: ${feature.properties.cons_area}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Conservation Area</span>
+    </div>
+    <div class="smbc-map__item__body">
+      <p>Name: ${feature.properties.cons_area}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -46,13 +54,17 @@ const developablesitesPopup = (feature, layer) => {
 
  const permissionedPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Sites with planning permission for housing (SHLAA 2020)</p>
-  <p></p>
-  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Net Site Capacity remaining: ${feature.properties.net_capacity}</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites with planning permission for housing (SHLAA 2020)</span>
+    </div>
+    <div class="smbc-map__item__body">
+    <p>Site Reference: ${feature.properties.site_reference}</p>
+    <p>Site Address: ${feature.properties.site_address}</p>
+    <p>Site Area (Ha): ${feature.properties.site_area}</p>
+    <p>Net Site Capacity remaining: ${feature.properties.net_capacity}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -60,13 +72,16 @@ const developablesitesPopup = (feature, layer) => {
 
  const notassessedPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">Sites that did not pass initial sift (SHLAA 2020)</p>
-  <p></p>
-  <p class="info">Site Reference: ${feature.properties.temp_id} (Working reference)</p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">${feature.properties.website_map_text}</p>
-
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-list smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites that did not pass initial sift (SHLAA 2020)</span>
+    </div>
+    <div class="smbc-map__item__body">
+    <p>Site Reference: ${feature.properties.temp_id} (Working reference)</p>
+    <p>Site Address: ${feature.properties.site_address}</p>
+    <p>${feature.properties.website_map_text}</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -74,14 +89,18 @@ const developablesitesPopup = (feature, layer) => {
 
  const nondevelopablesitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-home" aria-hidden="true"></i><p class="title">Sites - Not Developable (SHLAA 2020)</p>
-  <p></p>
-  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
-  <p class="info">Site Address: ${feature.properties.site_address}</p>
-  <p class="info">Site Description: ${feature.properties.site_description}</p>
-  <p class="info">Site Area (Ha): ${feature.properties.site_area}</p>
-  <p class="info">Notes: See site assessment summary in the Annex to the main SHLAA report.</p>
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-home smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">Sites - Not Developable (SHLAA 2020)</span>
+    </div>
+    <div class="smbc-map__item__body">
+    <p>Site Reference: ${feature.properties.site_reference}</p>
+    <p>Site Address: ${feature.properties.site_address}</p>
+    <p>Site Description: ${feature.properties.site_description}</p>
+    <p>Site Area (Ha): ${feature.properties.site_area}</p>
+    <p>Notes: See site assessment summary in the Annex to the main SHLAA report.</p>
+    </div>
   </div>`
  
   layer.bindPopup(content)
@@ -89,11 +108,14 @@ const developablesitesPopup = (feature, layer) => {
 
  const allsitesPopup = (feature, layer) => {
   
-  const content = `<div class="item"><i class="fa fa-list" aria-hidden="true"></i><p class="title">All Sites Considered (SHLAA 2020)</p>
-  <p></p>
-  <p class="info">Site Reference: ${feature.properties.site_reference}</p>
-
-  
+  const content = `<div class="smbc-map__item">
+    <div class="smbc-map__item__header__block">
+      <i class="fa fa-list smbc-map__item__header__block__icon" aria-hidden="true"></i>
+      <span class="smbc-map__item__header__block__title">All Sites Considered (SHLAA 2020)</span>
+    </div>
+    <div class="smbc-map__item__body">
+    <p>Site Reference: ${feature.properties.site_reference}</p>
+    </div>
   </div>`
 
   layer.bindPopup(content)
